@@ -1,0 +1,195 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/jesseduffield/lazygit/master/schema/config.json
+
+gui:
+  nerdFontsVersion: "3"
+
+  sidePanelWidth: 0.30
+  expandFocusedSidePanel: true
+  expandedSidePanelWeight: 2
+
+  mainPanelSplitMode: flexible
+  enlargedSideViewLocation: left
+
+  screenMode: normal
+  border: rounded
+
+  portraitMode: auto
+  portraitModeAutoMaxWidth: 100
+  portraitModeAutoMinHeight: 40
+
+  showFileTree: true
+  showRootItemInFileTree: true
+  fileTreeSortOrder: foldersFirst
+  fileTreeSortCaseSensitive: true
+  showNumstatInFilesView: true
+
+  wrapLinesInStagingView: true
+  useHunkModeInStagingView: true
+
+  scrollHeight: 3
+  scrollPastBottom: true
+  scrollOffMargin: 5
+  scrollOffBehavior: margin
+
+  mouseEvents: true
+
+  language: auto
+
+  timeFormat: "2006-01-02 15:04"
+  shortTimeFormat: "15:04"
+
+  showListFooter: true
+  showPanelJumps: true
+  showCommandLog: true
+  commandLogSize: 8
+  showBottomLine: true
+  showRandomTip: false
+
+  commitLength:
+    show: true
+
+  commitAuthorShortLength: 2
+  commitAuthorLongLength: 18
+  commitHashLength: 10
+
+  showBranchCommitHash: true
+  showDivergenceFromBaseBranch: arrowAndNumber
+
+  # ==========================================================================
+  # SAME COLOR ROLES USED BY WALLSYNC
+  # ==========================================================================
+
+  theme:
+    # WallSync Base46 -> blue
+    activeBorderColor:
+      - "{{colors.blue.default.hex}}"
+      - bold
+
+    # WallSync Base46 -> light_grey / outline
+    inactiveBorderColor:
+      - "{{colors.outline.default.hex}}"
+
+    # WallSync Base46 -> cyan
+    searchingActiveBorderColor:
+      - "{{colors.cyan.default.hex}}"
+      - bold
+
+    # WallSync Base46 -> light_grey
+    optionsTextColor:
+      - "{{colors.outline.default.hex}}"
+
+    # WallSync Base46 -> pmenu_bg / grey
+    selectedLineBgColor:
+      - "{{colors.surface_variant.default.hex}}"
+
+    # WallSync Base46 -> black
+    inactiveViewSelectedLineBgColor:
+      - "{{colors.background.default.hex}}"
+
+    # WallSync Base46 -> white
+    cherryPickedCommitFgColor:
+      - "{{colors.on_background.default.hex}}"
+
+    # WallSync Base46 -> purple
+    cherryPickedCommitBgColor:
+      - "{{colors.tertiary.default.hex}}"
+
+    # WallSync Base46 -> white
+    markedBaseCommitFgColor:
+      - "{{colors.on_background.default.hex}}"
+
+    # WallSync Base46 -> teal
+    markedBaseCommitBgColor:
+      - "{{colors.secondary_container.default.hex}}"
+
+    # WallSync Base46 -> red
+    unstagedChangesColor:
+      - "{{colors.red.default.hex}}"
+
+    # WallSync Base46 -> white
+    defaultFgColor:
+      - "{{colors.on_background.default.hex}}"
+
+  authorColors:
+    "*": "{{colors.blue.default.hex}}"
+
+  spinner:
+    frames:
+      - "⠋"
+      - "⠙"
+      - "⠹"
+      - "⠸"
+      - "⠼"
+      - "⠴"
+      - "⠦"
+      - "⠧"
+      - "⠇"
+      - "⠏"
+
+    rate: 80
+
+  statusPanelView: dashboard
+
+  switchToFilesAfterStashPop: true
+  switchToFilesAfterStashApply: true
+
+git:
+  autoFetch: true
+  autoRefresh: true
+  autoDetectExternalChanges: true
+  fetchAll: true
+
+  autoForwardBranches: onlyMainBranches
+  autoStageResolvedConflicts: true
+
+  mainBranches:
+    - main
+    - master
+    - develop
+
+  localBranchSortOrder: recency
+  remoteBranchSortOrder: date
+
+  disableForcePushing: true
+
+  ignoreWhitespaceInDiffView: false
+  diffContextSize: 4
+  renameSimilarityThreshold: 50
+
+  commit:
+    signOff: false
+    autoWrapCommitMessage: true
+    autoWrapWidth: 72
+
+  log:
+    order: topo-order
+    showGraph: always
+    showWholeGraph: false
+
+  parseEmoji: true
+
+worktree:
+  defaultPath: ""
+
+refresher:
+  refreshInterval: 5
+  fetchInterval: 60
+  externalChangeCheckInterval: 2
+
+os:
+  editPreset: nvim-remote
+
+  # LazyGit's own placeholders.
+  # Matugen must not interpret these as Matugen variables.
+  open: "xdg-open \u007b\u007bfilename\u007d\u007d >/dev/null 2>&1"
+  openLink: "xdg-open \u007b\u007blink\u007d\u007d >/dev/null 2>&1"
+
+update:
+  method: background
+  days: 14
+
+confirmOnQuit: false
+quitOnTopLevelReturn: false
+disableStartupPopups: true
+promptToReturnFromSubprocess: true
+notARepository: prompt

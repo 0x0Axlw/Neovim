@@ -1,0 +1,60 @@
+# ====================================================================
+# WALLSYNC / NVCHAD
+# ============================================================================
+
+[templates.nvim]
+input_path = '~/.local/share/wallsync/matugen.lua'
+output_path = '~/.cache/wal/base46-dark.lua'
+
+[templates.nvimlight]
+input_path = '~/.local/share/wallsync/matugen.lua'
+output_path = '~/.cache/wal/base46-light.lua'
+
+[templates.pywal]
+input_path = '~/.local/share/wallsync/waltemplate'
+output_path = '~/.cache/wal/colors'
+
+# ============================================================================
+# LAZYGIT
+# ============================================================================
+
+[templates.lazygit]
+input_path = '~/.config/nvim/.lazygit.template.yml'
+output_path = '~/.config/lazygit/config.yml'
+
+# ============================================================================
+# WALLSYNC CUSTOM COLORS
+# ============================================================================
+#
+# These exist because the official WallSync Base46 template uses these
+# semantic color names.
+#
+# Matugen blends them with the wallpaper palette.
+
+[config.custom_colors.red]
+color = "#FF0000"
+blend = true
+
+[config.custom_colors.green]
+color = "#00FF00"
+blend = true
+
+[config.custom_colors.yellow]
+color = "#FFFF00"
+blend = true
+
+[config.custom_colors.blue]
+color = "#0000FF"
+blend = true
+
+[config.custom_colors.magenta]
+color = "#FF00FF"
+blend = true
+
+[config.custom_colors.cyan]
+color = "#00FFFF"
+blend = true
+
+[config.custom_colors.white]
+color = "#FFFFFF"
+blend = true

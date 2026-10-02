@@ -1,0 +1,261 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/jesseduffield/lazygit/master/schema/config.json
+
+# =============================================================================
+
+# Matugen-powered dynamic theme
+# =============================================================================
+
+gui:
+  # ===========================================================================
+  # Layout
+  # ===========================================================================
+
+  nerdFontsVersion: "3"
+
+  sidePanelWidth: 0.30
+
+  expandFocusedSidePanel: true
+  expandedSidePanelWeight: 2
+
+  mainPanelSplitMode: flexible
+  enlargedSideViewLocation: left
+
+  screenMode: normal
+  border: rounded
+
+  portraitMode: auto
+  portraitModeAutoMaxWidth: 100
+  portraitModeAutoMinHeight: 40
+
+  # ===========================================================================
+  # Files
+  # ===========================================================================
+
+  showFileTree: true
+  showRootItemInFileTree: true
+
+  fileTreeSortOrder: foldersFirst
+  fileTreeSortCaseSensitive: true
+
+  showNumstatInFilesView: true
+
+  wrapLinesInStagingView: true
+  useHunkModeInStagingView: true
+
+  # ===========================================================================
+  # Navigation
+  # ===========================================================================
+
+  scrollHeight: 3
+  scrollPastBottom: true
+
+  scrollOffMargin: 5
+  scrollOffBehavior: margin
+
+  mouseEvents: true
+
+  # ===========================================================================
+  # Display
+  # ===========================================================================
+
+  language: auto
+
+  timeFormat: "2006-01-02 15:04"
+  shortTimeFormat: "15:04"
+
+  showListFooter: true
+  showPanelJumps: true
+
+  showCommandLog: true
+  commandLogSize: 8
+
+  showBottomLine: true
+  showRandomTip: false
+
+  # ===========================================================================
+  # Commit display
+  # ===========================================================================
+
+  commitLength:
+    show: true
+
+  commitAuthorShortLength: 2
+  commitAuthorLongLength: 18
+  commitHashLength: 10
+
+  showBranchCommitHash: true
+  showDivergenceFromBaseBranch: arrowAndNumber
+
+  # ===========================================================================
+  # MATUGEN THEME
+  # ===========================================================================
+
+  theme:
+    # Active panel border
+    activeBorderColor:
+      - "#b8cacc"
+      - bold
+
+    # Inactive panel border
+    inactiveBorderColor:
+      - "#919190"
+
+    # Search focus
+    searchingActiveBorderColor:
+      - "#bec8c9"
+      - bold
+
+    # Help / options text
+    optionsTextColor:
+      - "#b1cbce"
+
+    # Current selected line
+    selectedLineBgColor:
+      - "#292a2a"
+
+    # Selected line when panel is inactive
+    inactiveViewSelectedLineBgColor:
+      - "#1f2020"
+
+    # Cherry-picked commit
+    cherryPickedCommitFgColor:
+      - "#cce8ea"
+
+    cherryPickedCommitBgColor:
+      - "#324b4d"
+
+    # Rebase base commit
+    markedBaseCommitFgColor:
+      - "#dae4e5"
+
+    markedBaseCommitBgColor:
+      - "#3f4849"
+
+    # Unstaged changes / warnings
+    unstagedChangesColor:
+      - "#ffb4ab"
+
+    # Normal text
+    defaultFgColor:
+      - "#e3e2e2"
+
+  # ===========================================================================
+  # Author colors
+  # ===========================================================================
+
+  authorColors:
+    "*": "#b8cacc"
+
+  # ===========================================================================
+  # Spinner
+  # ===========================================================================
+
+  spinner:
+    frames:
+      - "⠋"
+      - "⠙"
+      - "⠹"
+      - "⠸"
+      - "⠼"
+      - "⠴"
+      - "⠦"
+      - "⠧"
+      - "⠇"
+      - "⠏"
+
+    rate: 80
+
+  # ===========================================================================
+  # Status
+  # ===========================================================================
+
+  statusPanelView: dashboard
+
+  switchToFilesAfterStashPop: true
+  switchToFilesAfterStashApply: true
+
+# =============================================================================
+# GIT
+# =============================================================================
+
+git:
+  autoFetch: true
+  autoRefresh: true
+  autoDetectExternalChanges: true
+  fetchAll: true
+
+  autoForwardBranches: onlyMainBranches
+  autoStageResolvedConflicts: true
+
+  mainBranches:
+    - main
+    - master
+    - develop
+
+  localBranchSortOrder: recency
+  remoteBranchSortOrder: date
+
+  disableForcePushing: true
+
+  ignoreWhitespaceInDiffView: false
+
+  diffContextSize: 4
+  renameSimilarityThreshold: 50
+
+  commit:
+    signOff: false
+    autoWrapCommitMessage: true
+    autoWrapWidth: 72
+
+  log:
+    order: topo-order
+    showGraph: always
+    showWholeGraph: false
+
+  parseEmoji: true
+
+# =============================================================================
+# WORKTREES
+# =============================================================================
+
+worktree:
+  defaultPath: ""
+
+# =============================================================================
+# BACKGROUND REFRESH
+# =============================================================================
+
+refresher:
+  refreshInterval: 5
+  fetchInterval: 60
+  externalChangeCheckInterval: 2
+
+# =============================================================================
+# NEOVIM
+# =============================================================================
+
+os:
+  editPreset: nvim-remote
+  open: "xdg-open \u007b\u007bfilename\u007d\u007d >/dev/null 2>&1"
+  openLink: "xdg-open \u007b\u007blink\u007d\u007d >/dev/null 2>&1"
+
+# =============================================================================
+# UPDATE
+# =============================================================================
+
+update:
+  method: background
+  days: 14
+
+# =============================================================================
+# GENERAL
+# =============================================================================
+
+confirmOnQuit: false
+quitOnTopLevelReturn: false
+
+disableStartupPopups: true
+
+promptToReturnFromSubprocess: true
+
+notARepository: prompt
